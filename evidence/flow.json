@@ -7,22 +7,79 @@
       "operation": "deploy",
       "hash": "0x8b729e0dad52b0ba543bc093e16213e2708fc601293ae97caccb380578269347",
       "status": "FINALIZED",
-      "result": 6,
-      "execution": "SUCCESS"
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "guard": null,
+      "stateUnchanged": null
     },
     {
       "operation": "early-fork-register",
       "hash": "0xae2f16d934e5b994165b840a78d60463144819b2acfe191ef9fa44ae57ecb76f",
       "status": "FINALIZED",
-      "result": 6,
-      "execution": "SUCCESS"
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "guard": null,
+      "stateUnchanged": null
     },
     {
       "operation": "early-fork-compare",
       "hash": "0xc519afcc6003cfd6f7b1248bf9efa01a9c4da5e7ba82546f4e079477b8bcab5a",
       "status": "FINALIZED",
-      "result": 6,
-      "execution": "SUCCESS"
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "guard": null,
+      "stateUnchanged": null
+    },
+    {
+      "operation": "preserved-register",
+      "hash": "0x54c94bba41c92510331f138e16eb65a9cfb663da582051cccd86775f4ec5c02f",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "guard": null,
+      "stateUnchanged": null
+    },
+    {
+      "operation": "preserved-compare",
+      "hash": "0x727f85d99301aa0353d05b0cd92a18c7ed67e4196a221c37d6fe11d23c8d0e9b",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "guard": null,
+      "stateUnchanged": null
+    },
+    {
+      "operation": "reject-non-equivalent",
+      "hash": "0x135514777ef8f3f0750e823aa71accb7c0e5213d6826248cfcd7142c3ab7d541",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "guard": "NOT_EQUIVALENT",
+      "stateUnchanged": true
+    },
+    {
+      "operation": "reject-stale-certificate",
+      "hash": "0xa6715190a49338f3f9405b59d5958fe87e8f248a8736817646d11fd3266e08a9",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "guard": "STALE_CERTIFICATE",
+      "stateUnchanged": true
+    },
+    {
+      "operation": "adopt-preserved",
+      "hash": "0xf3eb8f0e0e47c01ea8677c7e11d53352cdfb3778c9750979e14e4de69346bd62",
+      "status": "FINALIZED",
+      "result": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "guard": null,
+      "stateUnchanged": null
     }
-  ]
+  ],
+  "finalStates": {
+    "early-fork": "DISTINGUISHABLE",
+    "preserved": "ADOPTED"
+  },
+  "independentReadbackCount": 2,
+  "receiptArchiveSha256": "fdf2b70c44f610c348e870774a20ff7dafa82914db5fd8be3bac5fa3f2e9f5a8"
 }

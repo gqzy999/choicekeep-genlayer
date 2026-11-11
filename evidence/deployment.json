@@ -7,6 +7,7 @@
   "sourceSha256": "6ca74f6179d85077257f1cbec8bbcb3f52ac5b6970b42c645322b9cb9e7b0347",
   "deploymentTransaction": "0x8b729e0dad52b0ba543bc093e16213e2708fc601293ae97caccb380578269347",
   "examples": [
-    "early-fork"
+    "early-fork",
+    "preserved"
   ]
 }

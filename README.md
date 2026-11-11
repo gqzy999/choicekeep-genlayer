@@ -39,6 +39,10 @@ Python tests mock the GenLayer host and model. JavaScript tests check the indepe
 
 Stable Studionet only: chain **61999**, RPC `https://studio.genlayer.com/api`, protocol **choicekeep-1**. Source SHA-256: `6ca74f6179d85077257f1cbec8bbcb3f52ac5b6970b42c645322b9cb9e7b0347`. Metadata and transaction records are in [evidence](evidence/).
 
+## Verified flows
+
+Stable Studionet records cover a negative comparison, a positive comparison followed by adoption, and two rejected adoptions with unchanged complete records. Eight unique finalized transactions contain six SUCCESS executions and two expected ERROR executions. A second client independently read back both final cases. See [validation](VALIDATION.md) for exact receipts, vote counts and scope.
+
 ## Scope and limitations
 
 Two to four states per side; one to three shared actions; at most 16 state pairs. First listed states are initial. Observations are exact declared labels, not independently discovered facts. Multiple destinations denote nondeterministic alternatives. No silent actions, clocks, probabilities, fairness or runtime instrumentation. Strong bisimulation is an established formal method, not a new mathematical invention. Consensus reduces interpretation inconsistency; it does not establish the truth or completeness of supplied rules. UNKNOWN blocks adoption; validator disagreement aborts comparison. Physical wallet signing and behavior of external workflow systems are outside the recorded validation scope.

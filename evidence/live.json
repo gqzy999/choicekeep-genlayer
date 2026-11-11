@@ -1,0 +1,3003 @@
+{
+  "sourceSha256": "6ca74f6179d85077257f1cbec8bbcb3f52ac5b6970b42c645322b9cb9e7b0347",
+  "steps": {
+    "deploy": {
+      "method": "deploy",
+      "args": [],
+      "guard": "",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": null,
+      "sendStarted": true,
+      "hash": "0x8b729e0dad52b0ba543bc093e16213e2708fc601293ae97caccb380578269347",
+      "done": true,
+      "receipt": {
+        "hash": "0x8b729e0dad52b0ba543bc093e16213e2708fc601293ae97caccb380578269347",
+        "status": 7,
+        "result": 6,
+        "execution": "SUCCESS",
+        "votes": {
+          "0x0174b4D7494Be33F46B76976f6c9F94004F1b27f": "agree",
+          "0x1Cd67946A11E6410a3DF1b27d35F4a511e93c882": "agree",
+          "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+          "0x8644a8D2D08903cAFA1F0fb28E34E0ecA727e9ED": "idle",
+          "0xe1626534791FC675ED813Cc2C89C427866526113": "agree"
+        },
+        "validatorCount": 4
+      }
+    },
+    "early-fork-register": {
+      "method": "register",
+      "args": [
+        "early-fork",
+        "{\"title\":\"A premature fork loses the next choice\",\"context\":\"Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.\",\"actions\":[\"advance\",\"return\"],\"left\":{\"name\":\"Open review protocol\",\"states\":[{\"name\":\"draft\",\"observation\":\"open\",\"rule\":\"On advance move to review. The return action is disabled. These are the only actions.\"},{\"name\":\"review\",\"observation\":\"open\",\"rule\":\"On advance move to closed. On return move to draft. These are the only actions.\"},{\"name\":\"closed\",\"observation\":\"closed\",\"rule\":\"Both advance and return are disabled. No action is enabled in this state.\"}]},\"right\":{\"name\":\"Premature commitment implementation\",\"states\":[{\"name\":\"queued\",\"observation\":\"open\",\"rule\":\"On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.\"},{\"name\":\"review-A\",\"observation\":\"open\",\"rule\":\"On advance move to archived. The return action is disabled. These are the only actions.\"},{\"name\":\"review-B\",\"observation\":\"open\",\"rule\":\"On return move to queued. The advance action is disabled. These are the only actions.\"},{\"name\":\"archived\",\"observation\":\"closed\",\"rule\":\"Both advance and return are disabled. No action is enabled in this state.\"}]}}"
+      ],
+      "guard": "",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": null,
+      "sendStarted": true,
+      "hash": "0xae2f16d934e5b994165b840a78d60463144819b2acfe191ef9fa44ae57ecb76f",
+      "done": true,
+      "receipt": {
+        "hash": "0xae2f16d934e5b994165b840a78d60463144819b2acfe191ef9fa44ae57ecb76f",
+        "status": 7,
+        "result": 6,
+        "execution": "SUCCESS",
+        "votes": {
+          "0x1Cd67946A11E6410a3DF1b27d35F4a511e93c882": "agree",
+          "0x2C93031BCCd12836A67f81a249e68abAFEaac2E5": "agree",
+          "0x722474B013fA39E5aA8785f927dCeB0e3F89815B": "idle",
+          "0xC65Ec56a1141866951B34D846be8EF433764A48B": "agree",
+          "0xD0eD149D26E76cf49fB588c970E608E44Dd4DAB8": "idle"
+        },
+        "validatorCount": 4
+      }
+    },
+    "early-fork-compare": {
+      "method": "compare",
+      "args": [
+        "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "early-fork"
+      ],
+      "guard": "",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": null,
+      "sendStarted": true,
+      "hash": "0xc519afcc6003cfd6f7b1248bf9efa01a9c4da5e7ba82546f4e079477b8bcab5a",
+      "done": true,
+      "receipt": {
+        "hash": "0xc519afcc6003cfd6f7b1248bf9efa01a9c4da5e7ba82546f4e079477b8bcab5a",
+        "status": 7,
+        "result": 6,
+        "execution": "SUCCESS",
+        "votes": {
+          "0x709a1dDECA594C16AB3864A00Eaa2BB1Cd9b5305": "idle",
+          "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "agree",
+          "0xD0eD149D26E76cf49fB588c970E608E44Dd4DAB8": "agree",
+          "0xc675c2B7E1F066B7c1D2fe54EF7B76C91CdFa5F4": "idle",
+          "0xe1626534791FC675ED813Cc2C89C427866526113": "agree"
+        },
+        "validatorCount": 4
+      }
+    },
+    "preserved-register": {
+      "method": "register",
+      "args": [
+        "preserved",
+        "{\"title\":\"Two review lanes, the same available choices\",\"context\":\"Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.\",\"actions\":[\"advance\",\"return\"],\"left\":{\"name\":\"Open review protocol\",\"states\":[{\"name\":\"draft\",\"observation\":\"open\",\"rule\":\"On advance move to review. The return action is disabled. These are the only actions.\"},{\"name\":\"review\",\"observation\":\"open\",\"rule\":\"On advance move to closed. On return move to draft. These are the only actions.\"},{\"name\":\"closed\",\"observation\":\"closed\",\"rule\":\"Both advance and return are disabled. No action is enabled in this state.\"}]},\"right\":{\"name\":\"Split review implementation\",\"states\":[{\"name\":\"queued\",\"observation\":\"open\",\"rule\":\"On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.\"},{\"name\":\"review-A\",\"observation\":\"open\",\"rule\":\"On advance move to archived. On return move to queued. These are the only actions.\"},{\"name\":\"review-B\",\"observation\":\"open\",\"rule\":\"On advance move to archived. On return move to queued. These are the only actions.\"},{\"name\":\"archived\",\"observation\":\"closed\",\"rule\":\"Both advance and return are disabled. No action is enabled in this state.\"}]}}"
+      ],
+      "guard": "",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": null,
+      "sendStarted": true,
+      "hash": "0x54c94bba41c92510331f138e16eb65a9cfb663da582051cccd86775f4ec5c02f",
+      "done": true,
+      "receipt": {
+        "hash": "0x54c94bba41c92510331f138e16eb65a9cfb663da582051cccd86775f4ec5c02f",
+        "status": 7,
+        "result": 6,
+        "execution": "SUCCESS",
+        "votes": {
+          "0x0174b4D7494Be33F46B76976f6c9F94004F1b27f": "agree",
+          "0x29300188B54F5BFEE91542595611603b4B201008": "agree",
+          "0x2bB088e4E6Fd1faBBd23d93F38D01f28a954A49c": "agree",
+          "0x37CD8552B86b2B662eCfb69C4A1253dBE41EB4C1": "agree",
+          "0xf1EAD5E5f876eae701eF1881b42861079cd9A287": "idle"
+        },
+        "validatorCount": 4
+      }
+    },
+    "preserved-compare": {
+      "method": "compare",
+      "args": [
+        "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "preserved"
+      ],
+      "guard": "",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": null,
+      "sendStarted": true,
+      "hash": "0x727f85d99301aa0353d05b0cd92a18c7ed67e4196a221c37d6fe11d23c8d0e9b",
+      "done": true,
+      "receipt": {
+        "hash": "0x727f85d99301aa0353d05b0cd92a18c7ed67e4196a221c37d6fe11d23c8d0e9b",
+        "status": 7,
+        "result": 6,
+        "execution": "SUCCESS",
+        "votes": {
+          "0x8644a8D2D08903cAFA1F0fb28E34E0ecA727e9ED": "agree",
+          "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "idle",
+          "0x8f1abcAF0fF10678Af925f83b2Bb8b3534c4b94b": "idle",
+          "0xD0eD149D26E76cf49fB588c970E608E44Dd4DAB8": "agree",
+          "0xe83D7241D0FF0f1f808B9ab3cb06dD2565bDc605": "agree"
+        },
+        "validatorCount": 4
+      }
+    },
+    "reject-non-equivalent": {
+      "method": "adopt",
+      "args": [
+        "early-fork",
+        "a3fc095375312171d4f00f32500e72b7b7589a61e3dd0d028a418f59e91a335f"
+      ],
+      "guard": "NOT_EQUIVALENT",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": {
+        "accepted": {
+          "rows": [
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1"
+                ],
+                []
+              ],
+              "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+              "reason": "State draft transitions to state 1 on advance and has return disabled."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "2"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+              "reason": "State review allows advance to closed and return to draft as specified."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "State closed is a terminal state with no enabled transitions for the alphabet."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1",
+                  "2"
+                ],
+                []
+              ],
+              "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+              "reason": "State queued permits a nondeterministic advance to indices 1 or 2 while return is off."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "3"
+                ],
+                []
+              ],
+              "quote": "On advance move to archived. The return action is disabled. These are the only actions.",
+              "reason": "State review-A transitions to state 3 on advance and explicitly disables return."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On return move to queued. The advance action is disabled. These are the only actions.",
+              "reason": "State review-B transitions to state 0 on return and explicitly disables advance."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "State archived is a terminal state with no outgoing edges for the defined actions."
+            }
+          ]
+        },
+        "adoption": null,
+        "certificate": "a3fc095375312171d4f00f32500e72b7b7589a61e3dd0d028a418f59e91a335f",
+        "input_hash": "07f4dee9bf6a8ac43dc4ba7f5df3188cf37594b37dbb249fa637fc7034a71459",
+        "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "proof": {
+          "outcome": "DISTINGUISHABLE",
+          "relation": [
+            [
+              "2",
+              "3"
+            ]
+          ],
+          "root": [
+            "0",
+            "0"
+          ],
+          "rounds": [
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "0",
+                  "1"
+                ],
+                [
+                  "0",
+                  "2"
+                ],
+                [
+                  "1",
+                  "0"
+                ],
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "pair": [
+                    "0",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "1",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "0"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "1"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "2"
+                  ],
+                  "why": "OBSERVATION"
+                }
+              ],
+              "round": "0"
+            },
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "1"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "3"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "2"
+                  ],
+                  "responses": [],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "1",
+                    "0"
+                  ],
+                  "responses": [
+                    [
+                      "2",
+                      "1"
+                    ],
+                    [
+                      "2",
+                      "2"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "2",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "1",
+                  "pair": [
+                    "1",
+                    "1"
+                  ],
+                  "responses": [],
+                  "side": "L",
+                  "target": "0",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "1",
+                    "2"
+                  ],
+                  "responses": [],
+                  "side": "L",
+                  "target": "2",
+                  "why": "UNMATCHED_MOVE"
+                }
+              ],
+              "round": "1"
+            },
+            {
+              "remaining": [
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "0"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "1"
+                    ],
+                    [
+                      "1",
+                      "2"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                }
+              ],
+              "round": "2"
+            }
+          ],
+          "unknown_rows": []
+        },
+        "protocol": "choicekeep-1",
+        "spec": {
+          "actions": [
+            "advance",
+            "return"
+          ],
+          "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+          "left": {
+            "name": "Open review protocol",
+            "states": [
+              {
+                "name": "draft",
+                "observation": "open",
+                "rule": "On advance move to review. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review",
+                "observation": "open",
+                "rule": "On advance move to closed. On return move to draft. These are the only actions."
+              },
+              {
+                "name": "closed",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "right": {
+            "name": "Premature commitment implementation",
+            "states": [
+              {
+                "name": "queued",
+                "observation": "open",
+                "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review-A",
+                "observation": "open",
+                "rule": "On advance move to archived. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review-B",
+                "observation": "open",
+                "rule": "On return move to queued. The advance action is disabled. These are the only actions."
+              },
+              {
+                "name": "archived",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "title": "A premature fork loses the next choice"
+        },
+        "state": "DISTINGUISHABLE",
+        "tag": "early-fork"
+      },
+      "sendStarted": true,
+      "hash": "0x135514777ef8f3f0750e823aa71accb7c0e5213d6826248cfcd7142c3ab7d541",
+      "after": {
+        "accepted": {
+          "rows": [
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1"
+                ],
+                []
+              ],
+              "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+              "reason": "State draft transitions to state 1 on advance and has return disabled."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "2"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+              "reason": "State review allows advance to closed and return to draft as specified."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "State closed is a terminal state with no enabled transitions for the alphabet."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1",
+                  "2"
+                ],
+                []
+              ],
+              "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+              "reason": "State queued permits a nondeterministic advance to indices 1 or 2 while return is off."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "3"
+                ],
+                []
+              ],
+              "quote": "On advance move to archived. The return action is disabled. These are the only actions.",
+              "reason": "State review-A transitions to state 3 on advance and explicitly disables return."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On return move to queued. The advance action is disabled. These are the only actions.",
+              "reason": "State review-B transitions to state 0 on return and explicitly disables advance."
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "State archived is a terminal state with no outgoing edges for the defined actions."
+            }
+          ]
+        },
+        "adoption": null,
+        "certificate": "a3fc095375312171d4f00f32500e72b7b7589a61e3dd0d028a418f59e91a335f",
+        "input_hash": "07f4dee9bf6a8ac43dc4ba7f5df3188cf37594b37dbb249fa637fc7034a71459",
+        "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "proof": {
+          "outcome": "DISTINGUISHABLE",
+          "relation": [
+            [
+              "2",
+              "3"
+            ]
+          ],
+          "root": [
+            "0",
+            "0"
+          ],
+          "rounds": [
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "0",
+                  "1"
+                ],
+                [
+                  "0",
+                  "2"
+                ],
+                [
+                  "1",
+                  "0"
+                ],
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "pair": [
+                    "0",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "1",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "0"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "1"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "2"
+                  ],
+                  "why": "OBSERVATION"
+                }
+              ],
+              "round": "0"
+            },
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "1"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "3"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "2"
+                  ],
+                  "responses": [],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "1",
+                    "0"
+                  ],
+                  "responses": [
+                    [
+                      "2",
+                      "1"
+                    ],
+                    [
+                      "2",
+                      "2"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "2",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "1",
+                  "pair": [
+                    "1",
+                    "1"
+                  ],
+                  "responses": [],
+                  "side": "L",
+                  "target": "0",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "1",
+                    "2"
+                  ],
+                  "responses": [],
+                  "side": "L",
+                  "target": "2",
+                  "why": "UNMATCHED_MOVE"
+                }
+              ],
+              "round": "1"
+            },
+            {
+              "remaining": [
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "0"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "1"
+                    ],
+                    [
+                      "1",
+                      "2"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                }
+              ],
+              "round": "2"
+            }
+          ],
+          "unknown_rows": []
+        },
+        "protocol": "choicekeep-1",
+        "spec": {
+          "actions": [
+            "advance",
+            "return"
+          ],
+          "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+          "left": {
+            "name": "Open review protocol",
+            "states": [
+              {
+                "name": "draft",
+                "observation": "open",
+                "rule": "On advance move to review. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review",
+                "observation": "open",
+                "rule": "On advance move to closed. On return move to draft. These are the only actions."
+              },
+              {
+                "name": "closed",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "right": {
+            "name": "Premature commitment implementation",
+            "states": [
+              {
+                "name": "queued",
+                "observation": "open",
+                "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review-A",
+                "observation": "open",
+                "rule": "On advance move to archived. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review-B",
+                "observation": "open",
+                "rule": "On return move to queued. The advance action is disabled. These are the only actions."
+              },
+              {
+                "name": "archived",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "title": "A premature fork loses the next choice"
+        },
+        "state": "DISTINGUISHABLE",
+        "tag": "early-fork"
+      },
+      "done": true,
+      "receipt": {
+        "hash": "0x135514777ef8f3f0750e823aa71accb7c0e5213d6826248cfcd7142c3ab7d541",
+        "status": 7,
+        "result": 6,
+        "execution": "ERROR",
+        "votes": {
+          "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+          "0x711353514049EAc21213834ADd07eF552aF394E6": "agree",
+          "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "idle",
+          "0x8f1abcAF0fF10678Af925f83b2Bb8b3534c4b94b": "idle",
+          "0xD0eD149D26E76cf49fB588c970E608E44Dd4DAB8": "agree"
+        },
+        "validatorCount": 4
+      }
+    },
+    "reject-stale-certificate": {
+      "method": "adopt",
+      "args": [
+        "preserved",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "guard": "STALE_CERTIFICATE",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": {
+        "accepted": {
+          "rows": [
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1"
+                ],
+                []
+              ],
+              "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+              "reason": "draft state enables advance to review (index 1) and explicitly disables return"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "2"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+              "reason": "review state enables advance to closed (index 2) and return to draft (index 0)"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "closed state disables every action with no successors"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1",
+                  "2"
+                ],
+                []
+              ],
+              "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+              "reason": "queued state enables nondeterministic advance to review-A (1) or review-B (2) and disables return"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "3"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+              "reason": "review-A state enables advance to archived (3) and return to queued (0)"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "3"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+              "reason": "review-B state enables advance to archived (3) and return to queued (0)"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "archived state disables every action with no successors"
+            }
+          ]
+        },
+        "adoption": null,
+        "certificate": "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b",
+        "input_hash": "36e441f36868e0f8952c18d9aeaeb1f5f96ce0d0b25bfec2f351acfc8cdf1276",
+        "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "proof": {
+          "outcome": "EQUIVALENT",
+          "relation": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "3"
+            ]
+          ],
+          "root": [
+            "0",
+            "0"
+          ],
+          "rounds": [
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "0",
+                  "1"
+                ],
+                [
+                  "0",
+                  "2"
+                ],
+                [
+                  "1",
+                  "0"
+                ],
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "pair": [
+                    "0",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "1",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "0"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "1"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "2"
+                  ],
+                  "why": "OBSERVATION"
+                }
+              ],
+              "round": "0"
+            },
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "1"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "3"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "2"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "3"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "1",
+                    "0"
+                  ],
+                  "responses": [
+                    [
+                      "2",
+                      "1"
+                    ],
+                    [
+                      "2",
+                      "2"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "2",
+                  "why": "UNMATCHED_MOVE"
+                }
+              ],
+              "round": "1"
+            }
+          ],
+          "unknown_rows": []
+        },
+        "protocol": "choicekeep-1",
+        "spec": {
+          "actions": [
+            "advance",
+            "return"
+          ],
+          "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+          "left": {
+            "name": "Open review protocol",
+            "states": [
+              {
+                "name": "draft",
+                "observation": "open",
+                "rule": "On advance move to review. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review",
+                "observation": "open",
+                "rule": "On advance move to closed. On return move to draft. These are the only actions."
+              },
+              {
+                "name": "closed",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "right": {
+            "name": "Split review implementation",
+            "states": [
+              {
+                "name": "queued",
+                "observation": "open",
+                "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review-A",
+                "observation": "open",
+                "rule": "On advance move to archived. On return move to queued. These are the only actions."
+              },
+              {
+                "name": "review-B",
+                "observation": "open",
+                "rule": "On advance move to archived. On return move to queued. These are the only actions."
+              },
+              {
+                "name": "archived",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "title": "Two review lanes, the same available choices"
+        },
+        "state": "EQUIVALENT",
+        "tag": "preserved"
+      },
+      "sendStarted": true,
+      "hash": "0xa6715190a49338f3f9405b59d5958fe87e8f248a8736817646d11fd3266e08a9",
+      "after": {
+        "accepted": {
+          "rows": [
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1"
+                ],
+                []
+              ],
+              "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+              "reason": "draft state enables advance to review (index 1) and explicitly disables return"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "2"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+              "reason": "review state enables advance to closed (index 2) and return to draft (index 0)"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "closed state disables every action with no successors"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "1",
+                  "2"
+                ],
+                []
+              ],
+              "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+              "reason": "queued state enables nondeterministic advance to review-A (1) or review-B (2) and disables return"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "3"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+              "reason": "review-A state enables advance to archived (3) and return to queued (0)"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [
+                  "3"
+                ],
+                [
+                  "0"
+                ]
+              ],
+              "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+              "reason": "review-B state enables advance to archived (3) and return to queued (0)"
+            },
+            {
+              "kind": "EXACT",
+              "moves": [
+                [],
+                []
+              ],
+              "quote": "Both advance and return are disabled. No action is enabled in this state.",
+              "reason": "archived state disables every action with no successors"
+            }
+          ]
+        },
+        "adoption": null,
+        "certificate": "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b",
+        "input_hash": "36e441f36868e0f8952c18d9aeaeb1f5f96ce0d0b25bfec2f351acfc8cdf1276",
+        "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "proof": {
+          "outcome": "EQUIVALENT",
+          "relation": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "3"
+            ]
+          ],
+          "root": [
+            "0",
+            "0"
+          ],
+          "rounds": [
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "0",
+                  "1"
+                ],
+                [
+                  "0",
+                  "2"
+                ],
+                [
+                  "1",
+                  "0"
+                ],
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "pair": [
+                    "0",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "1",
+                    "3"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "0"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "1"
+                  ],
+                  "why": "OBSERVATION"
+                },
+                {
+                  "pair": [
+                    "2",
+                    "2"
+                  ],
+                  "why": "OBSERVATION"
+                }
+              ],
+              "round": "0"
+            },
+            {
+              "remaining": [
+                [
+                  "0",
+                  "0"
+                ],
+                [
+                  "1",
+                  "1"
+                ],
+                [
+                  "1",
+                  "2"
+                ],
+                [
+                  "2",
+                  "3"
+                ]
+              ],
+              "removed": [
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "1"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "3"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "0",
+                    "2"
+                  ],
+                  "responses": [
+                    [
+                      "1",
+                      "3"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "1",
+                  "why": "UNMATCHED_MOVE"
+                },
+                {
+                  "action": "0",
+                  "pair": [
+                    "1",
+                    "0"
+                  ],
+                  "responses": [
+                    [
+                      "2",
+                      "1"
+                    ],
+                    [
+                      "2",
+                      "2"
+                    ]
+                  ],
+                  "side": "L",
+                  "target": "2",
+                  "why": "UNMATCHED_MOVE"
+                }
+              ],
+              "round": "1"
+            }
+          ],
+          "unknown_rows": []
+        },
+        "protocol": "choicekeep-1",
+        "spec": {
+          "actions": [
+            "advance",
+            "return"
+          ],
+          "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+          "left": {
+            "name": "Open review protocol",
+            "states": [
+              {
+                "name": "draft",
+                "observation": "open",
+                "rule": "On advance move to review. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review",
+                "observation": "open",
+                "rule": "On advance move to closed. On return move to draft. These are the only actions."
+              },
+              {
+                "name": "closed",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "right": {
+            "name": "Split review implementation",
+            "states": [
+              {
+                "name": "queued",
+                "observation": "open",
+                "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+              },
+              {
+                "name": "review-A",
+                "observation": "open",
+                "rule": "On advance move to archived. On return move to queued. These are the only actions."
+              },
+              {
+                "name": "review-B",
+                "observation": "open",
+                "rule": "On advance move to archived. On return move to queued. These are the only actions."
+              },
+              {
+                "name": "archived",
+                "observation": "closed",
+                "rule": "Both advance and return are disabled. No action is enabled in this state."
+              }
+            ]
+          },
+          "title": "Two review lanes, the same available choices"
+        },
+        "state": "EQUIVALENT",
+        "tag": "preserved"
+      },
+      "done": true,
+      "receipt": {
+        "hash": "0xa6715190a49338f3f9405b59d5958fe87e8f248a8736817646d11fd3266e08a9",
+        "status": 7,
+        "result": 6,
+        "execution": "ERROR",
+        "votes": {
+          "0x0174b4D7494Be33F46B76976f6c9F94004F1b27f": "idle",
+          "0x2C93031BCCd12836A67f81a249e68abAFEaac2E5": "idle",
+          "0x709a1dDECA594C16AB3864A00Eaa2BB1Cd9b5305": "agree",
+          "0x711353514049EAc21213834ADd07eF552aF394E6": "agree",
+          "0xe1626534791FC675ED813Cc2C89C427866526113": "agree"
+        },
+        "validatorCount": 4
+      }
+    },
+    "adopt-preserved": {
+      "method": "adopt",
+      "args": [
+        "preserved",
+        "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b"
+      ],
+      "guard": "",
+      "preflight": {
+        "chainId": 61999,
+        "gasPrice": "0x0",
+        "value": "0",
+        "leaderOnly": false
+      },
+      "before": null,
+      "sendStarted": true,
+      "hash": "0xf3eb8f0e0e47c01ea8677c7e11d53352cdfb3778c9750979e14e4de69346bd62",
+      "done": true,
+      "receipt": {
+        "hash": "0xf3eb8f0e0e47c01ea8677c7e11d53352cdfb3778c9750979e14e4de69346bd62",
+        "status": 7,
+        "result": 6,
+        "execution": "SUCCESS",
+        "votes": {
+          "0x2bB088e4E6Fd1faBBd23d93F38D01f28a954A49c": "agree",
+          "0x560FBD37a10bC2B96F118071e922c9106c12Ba1d": "agree",
+          "0x709a1dDECA594C16AB3864A00Eaa2BB1Cd9b5305": "agree",
+          "0x711353514049EAc21213834ADd07eF552aF394E6": "agree",
+          "0x8ADae333478F9D037c78b0E3E8279DdAAb20a1B3": "agree"
+        },
+        "validatorCount": 4
+      }
+    }
+  },
+  "records": {
+    "early-fork": {
+      "accepted": {
+        "rows": [
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1"
+              ],
+              []
+            ],
+            "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+            "reason": "State draft transitions to state 1 on advance and has return disabled."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "2"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+            "reason": "State review allows advance to closed and return to draft as specified."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "State closed is a terminal state with no enabled transitions for the alphabet."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1",
+                "2"
+              ],
+              []
+            ],
+            "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+            "reason": "State queued permits a nondeterministic advance to indices 1 or 2 while return is off."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "3"
+              ],
+              []
+            ],
+            "quote": "On advance move to archived. The return action is disabled. These are the only actions.",
+            "reason": "State review-A transitions to state 3 on advance and explicitly disables return."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On return move to queued. The advance action is disabled. These are the only actions.",
+            "reason": "State review-B transitions to state 0 on return and explicitly disables advance."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "State archived is a terminal state with no outgoing edges for the defined actions."
+          }
+        ]
+      },
+      "adoption": null,
+      "certificate": "a3fc095375312171d4f00f32500e72b7b7589a61e3dd0d028a418f59e91a335f",
+      "input_hash": "07f4dee9bf6a8ac43dc4ba7f5df3188cf37594b37dbb249fa637fc7034a71459",
+      "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+      "proof": {
+        "outcome": "DISTINGUISHABLE",
+        "relation": [
+          [
+            "2",
+            "3"
+          ]
+        ],
+        "root": [
+          "0",
+          "0"
+        ],
+        "rounds": [
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1"
+              ],
+              [
+                "0",
+                "2"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "pair": [
+                  "0",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "1",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "0"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "1"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "2"
+                ],
+                "why": "OBSERVATION"
+              }
+            ],
+            "round": "0"
+          },
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "1"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "3"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "2"
+                ],
+                "responses": [],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "1",
+                  "0"
+                ],
+                "responses": [
+                  [
+                    "2",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "2"
+                  ]
+                ],
+                "side": "L",
+                "target": "2",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "1",
+                "pair": [
+                  "1",
+                  "1"
+                ],
+                "responses": [],
+                "side": "L",
+                "target": "0",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "1",
+                  "2"
+                ],
+                "responses": [],
+                "side": "L",
+                "target": "2",
+                "why": "UNMATCHED_MOVE"
+              }
+            ],
+            "round": "1"
+          },
+          {
+            "remaining": [
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "0"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "1"
+                  ],
+                  [
+                    "1",
+                    "2"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              }
+            ],
+            "round": "2"
+          }
+        ],
+        "unknown_rows": []
+      },
+      "protocol": "choicekeep-1",
+      "spec": {
+        "actions": [
+          "advance",
+          "return"
+        ],
+        "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+        "left": {
+          "name": "Open review protocol",
+          "states": [
+            {
+              "name": "draft",
+              "observation": "open",
+              "rule": "On advance move to review. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review",
+              "observation": "open",
+              "rule": "On advance move to closed. On return move to draft. These are the only actions."
+            },
+            {
+              "name": "closed",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "right": {
+          "name": "Premature commitment implementation",
+          "states": [
+            {
+              "name": "queued",
+              "observation": "open",
+              "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review-A",
+              "observation": "open",
+              "rule": "On advance move to archived. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review-B",
+              "observation": "open",
+              "rule": "On return move to queued. The advance action is disabled. These are the only actions."
+            },
+            {
+              "name": "archived",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "title": "A premature fork loses the next choice"
+      },
+      "state": "DISTINGUISHABLE",
+      "tag": "early-fork"
+    },
+    "preserved": {
+      "accepted": {
+        "rows": [
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1"
+              ],
+              []
+            ],
+            "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+            "reason": "draft state enables advance to review (index 1) and explicitly disables return"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "2"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+            "reason": "review state enables advance to closed (index 2) and return to draft (index 0)"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "closed state disables every action with no successors"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1",
+                "2"
+              ],
+              []
+            ],
+            "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+            "reason": "queued state enables nondeterministic advance to review-A (1) or review-B (2) and disables return"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "3"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+            "reason": "review-A state enables advance to archived (3) and return to queued (0)"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "3"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+            "reason": "review-B state enables advance to archived (3) and return to queued (0)"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "archived state disables every action with no successors"
+          }
+        ]
+      },
+      "adoption": {
+        "by": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "certificate": "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b",
+        "reference": "Open review protocol",
+        "replacement": "Split review implementation"
+      },
+      "certificate": "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b",
+      "input_hash": "36e441f36868e0f8952c18d9aeaeb1f5f96ce0d0b25bfec2f351acfc8cdf1276",
+      "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+      "proof": {
+        "outcome": "EQUIVALENT",
+        "relation": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "3"
+          ]
+        ],
+        "root": [
+          "0",
+          "0"
+        ],
+        "rounds": [
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1"
+              ],
+              [
+                "0",
+                "2"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "pair": [
+                  "0",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "1",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "0"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "1"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "2"
+                ],
+                "why": "OBSERVATION"
+              }
+            ],
+            "round": "0"
+          },
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "1"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "3"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "2"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "3"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "1",
+                  "0"
+                ],
+                "responses": [
+                  [
+                    "2",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "2"
+                  ]
+                ],
+                "side": "L",
+                "target": "2",
+                "why": "UNMATCHED_MOVE"
+              }
+            ],
+            "round": "1"
+          }
+        ],
+        "unknown_rows": []
+      },
+      "protocol": "choicekeep-1",
+      "spec": {
+        "actions": [
+          "advance",
+          "return"
+        ],
+        "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+        "left": {
+          "name": "Open review protocol",
+          "states": [
+            {
+              "name": "draft",
+              "observation": "open",
+              "rule": "On advance move to review. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review",
+              "observation": "open",
+              "rule": "On advance move to closed. On return move to draft. These are the only actions."
+            },
+            {
+              "name": "closed",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "right": {
+          "name": "Split review implementation",
+          "states": [
+            {
+              "name": "queued",
+              "observation": "open",
+              "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review-A",
+              "observation": "open",
+              "rule": "On advance move to archived. On return move to queued. These are the only actions."
+            },
+            {
+              "name": "review-B",
+              "observation": "open",
+              "rule": "On advance move to archived. On return move to queued. These are the only actions."
+            },
+            {
+              "name": "archived",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "title": "Two review lanes, the same available choices"
+      },
+      "state": "ADOPTED",
+      "tag": "preserved"
+    }
+  },
+  "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+  "schema": {
+    "ctor": {
+      "params": [],
+      "kwparams": {}
+    },
+    "methods": {
+      "adopt": {
+        "params": [
+          [
+            "tag",
+            "string"
+          ],
+          [
+            "certificate",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "null",
+        "payable": false
+      },
+      "compare": {
+        "params": [
+          [
+            "owner",
+            "string"
+          ],
+          [
+            "tag",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "null",
+        "payable": false
+      },
+      "get_case": {
+        "params": [
+          [
+            "owner",
+            "string"
+          ],
+          [
+            "tag",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "get_protocol": {
+        "params": [],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "register": {
+        "params": [
+          [
+            "tag",
+            "string"
+          ],
+          [
+            "payload",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "null",
+        "payable": false
+      }
+    }
+  },
+  "address": "0x86181ced681f7832b0475780a96493e389c84cf5",
+  "independentReadback": [
+    {
+      "accepted": {
+        "rows": [
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1"
+              ],
+              []
+            ],
+            "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+            "reason": "State draft transitions to state 1 on advance and has return disabled."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "2"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+            "reason": "State review allows advance to closed and return to draft as specified."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "State closed is a terminal state with no enabled transitions for the alphabet."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1",
+                "2"
+              ],
+              []
+            ],
+            "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+            "reason": "State queued permits a nondeterministic advance to indices 1 or 2 while return is off."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "3"
+              ],
+              []
+            ],
+            "quote": "On advance move to archived. The return action is disabled. These are the only actions.",
+            "reason": "State review-A transitions to state 3 on advance and explicitly disables return."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On return move to queued. The advance action is disabled. These are the only actions.",
+            "reason": "State review-B transitions to state 0 on return and explicitly disables advance."
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "State archived is a terminal state with no outgoing edges for the defined actions."
+          }
+        ]
+      },
+      "adoption": null,
+      "certificate": "a3fc095375312171d4f00f32500e72b7b7589a61e3dd0d028a418f59e91a335f",
+      "input_hash": "07f4dee9bf6a8ac43dc4ba7f5df3188cf37594b37dbb249fa637fc7034a71459",
+      "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+      "proof": {
+        "outcome": "DISTINGUISHABLE",
+        "relation": [
+          [
+            "2",
+            "3"
+          ]
+        ],
+        "root": [
+          "0",
+          "0"
+        ],
+        "rounds": [
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1"
+              ],
+              [
+                "0",
+                "2"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "pair": [
+                  "0",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "1",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "0"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "1"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "2"
+                ],
+                "why": "OBSERVATION"
+              }
+            ],
+            "round": "0"
+          },
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "1"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "3"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "2"
+                ],
+                "responses": [],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "1",
+                  "0"
+                ],
+                "responses": [
+                  [
+                    "2",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "2"
+                  ]
+                ],
+                "side": "L",
+                "target": "2",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "1",
+                "pair": [
+                  "1",
+                  "1"
+                ],
+                "responses": [],
+                "side": "L",
+                "target": "0",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "1",
+                  "2"
+                ],
+                "responses": [],
+                "side": "L",
+                "target": "2",
+                "why": "UNMATCHED_MOVE"
+              }
+            ],
+            "round": "1"
+          },
+          {
+            "remaining": [
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "0"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "1"
+                  ],
+                  [
+                    "1",
+                    "2"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              }
+            ],
+            "round": "2"
+          }
+        ],
+        "unknown_rows": []
+      },
+      "protocol": "choicekeep-1",
+      "spec": {
+        "actions": [
+          "advance",
+          "return"
+        ],
+        "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+        "left": {
+          "name": "Open review protocol",
+          "states": [
+            {
+              "name": "draft",
+              "observation": "open",
+              "rule": "On advance move to review. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review",
+              "observation": "open",
+              "rule": "On advance move to closed. On return move to draft. These are the only actions."
+            },
+            {
+              "name": "closed",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "right": {
+          "name": "Premature commitment implementation",
+          "states": [
+            {
+              "name": "queued",
+              "observation": "open",
+              "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review-A",
+              "observation": "open",
+              "rule": "On advance move to archived. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review-B",
+              "observation": "open",
+              "rule": "On return move to queued. The advance action is disabled. These are the only actions."
+            },
+            {
+              "name": "archived",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "title": "A premature fork loses the next choice"
+      },
+      "state": "DISTINGUISHABLE",
+      "tag": "early-fork"
+    },
+    {
+      "accepted": {
+        "rows": [
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1"
+              ],
+              []
+            ],
+            "quote": "On advance move to review. The return action is disabled. These are the only actions.",
+            "reason": "draft state enables advance to review (index 1) and explicitly disables return"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "2"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to closed. On return move to draft. These are the only actions.",
+            "reason": "review state enables advance to closed (index 2) and return to draft (index 0)"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "closed state disables every action with no successors"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "1",
+                "2"
+              ],
+              []
+            ],
+            "quote": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions.",
+            "reason": "queued state enables nondeterministic advance to review-A (1) or review-B (2) and disables return"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "3"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+            "reason": "review-A state enables advance to archived (3) and return to queued (0)"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [
+                "3"
+              ],
+              [
+                "0"
+              ]
+            ],
+            "quote": "On advance move to archived. On return move to queued. These are the only actions.",
+            "reason": "review-B state enables advance to archived (3) and return to queued (0)"
+          },
+          {
+            "kind": "EXACT",
+            "moves": [
+              [],
+              []
+            ],
+            "quote": "Both advance and return are disabled. No action is enabled in this state.",
+            "reason": "archived state disables every action with no successors"
+          }
+        ]
+      },
+      "adoption": {
+        "by": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+        "certificate": "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b",
+        "reference": "Open review protocol",
+        "replacement": "Split review implementation"
+      },
+      "certificate": "482d02c713f80d2da9edf611b158edfd63d53872298c52f7024627b3de31e00b",
+      "input_hash": "36e441f36868e0f8952c18d9aeaeb1f5f96ce0d0b25bfec2f351acfc8cdf1276",
+      "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+      "proof": {
+        "outcome": "EQUIVALENT",
+        "relation": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "1"
+          ],
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "3"
+          ]
+        ],
+        "root": [
+          "0",
+          "0"
+        ],
+        "rounds": [
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1"
+              ],
+              [
+                "0",
+                "2"
+              ],
+              [
+                "1",
+                "0"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "pair": [
+                  "0",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "1",
+                  "3"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "0"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "1"
+                ],
+                "why": "OBSERVATION"
+              },
+              {
+                "pair": [
+                  "2",
+                  "2"
+                ],
+                "why": "OBSERVATION"
+              }
+            ],
+            "round": "0"
+          },
+          {
+            "remaining": [
+              [
+                "0",
+                "0"
+              ],
+              [
+                "1",
+                "1"
+              ],
+              [
+                "1",
+                "2"
+              ],
+              [
+                "2",
+                "3"
+              ]
+            ],
+            "removed": [
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "1"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "3"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "0",
+                  "2"
+                ],
+                "responses": [
+                  [
+                    "1",
+                    "3"
+                  ]
+                ],
+                "side": "L",
+                "target": "1",
+                "why": "UNMATCHED_MOVE"
+              },
+              {
+                "action": "0",
+                "pair": [
+                  "1",
+                  "0"
+                ],
+                "responses": [
+                  [
+                    "2",
+                    "1"
+                  ],
+                  [
+                    "2",
+                    "2"
+                  ]
+                ],
+                "side": "L",
+                "target": "2",
+                "why": "UNMATCHED_MOVE"
+              }
+            ],
+            "round": "1"
+          }
+        ],
+        "unknown_rows": []
+      },
+      "protocol": "choicekeep-1",
+      "spec": {
+        "actions": [
+          "advance",
+          "return"
+        ],
+        "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+        "left": {
+          "name": "Open review protocol",
+          "states": [
+            {
+              "name": "draft",
+              "observation": "open",
+              "rule": "On advance move to review. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review",
+              "observation": "open",
+              "rule": "On advance move to closed. On return move to draft. These are the only actions."
+            },
+            {
+              "name": "closed",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "right": {
+          "name": "Split review implementation",
+          "states": [
+            {
+              "name": "queued",
+              "observation": "open",
+              "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+            },
+            {
+              "name": "review-A",
+              "observation": "open",
+              "rule": "On advance move to archived. On return move to queued. These are the only actions."
+            },
+            {
+              "name": "review-B",
+              "observation": "open",
+              "rule": "On advance move to archived. On return move to queued. These are the only actions."
+            },
+            {
+              "name": "archived",
+              "observation": "closed",
+              "rule": "Both advance and return are disabled. No action is enabled in this state."
+            }
+          ]
+        },
+        "title": "Two review lanes, the same available choices"
+      },
+      "state": "ADOPTED",
+      "tag": "preserved"
+    }
+  ],
+  "complete": true,
+  "network": {
+    "chainId": 61999,
+    "rpc": "https://studio.genlayer.com/api"
+  },
+  "fixture": "Synthetic declared workflows; one operator-controlled disposable SDK account. Zero-value transactions; zero gas price checked before each send. Complete SDK receipts archived separately."
+}

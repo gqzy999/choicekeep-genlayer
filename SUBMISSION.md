@@ -8,14 +8,14 @@ Compare workflow replacements using consensus-compiled transition models and an 
 
 ## Description
 
-ChoiceKeep detects when a replacement reaches the same endings but loses choices along the way. GenLayer independently compiles declared workflow rules into complete transition tables; validators must agree on every transition. Deterministic contract code computes observation-preserving strong bisimulation and records a ranked counterstrategy when choices differ. The app replays relation-elimination rounds, verifies source and certificate hashes, and supports wallet or explicitly labelled temporary-account interactions. Stable Studionet evidence demonstrates a finalized negative comparison with majority agreement. Positive adoption and guard checks have local test coverage; their chain validation is outside the recorded evidence.
+ChoiceKeep detects when a replacement reaches the same endings but loses choices along the way. GenLayer independently compiles declared workflow rules into complete transition tables; validators must agree on every transition. Deterministic contract code computes observation-preserving strong bisimulation and records a ranked counterstrategy when choices differ. The app replays relation-elimination rounds, verifies source and certificate hashes, and supports wallet or explicitly labelled temporary-account interactions. Stable Studionet evidence covers negative and positive comparisons, exact-certificate adoption, and two rejected adoptions with unchanged state. Eight finalized transactions and two independent final-record reads are archived.
 
 ## Review steps
 
 1. Open the app and inspect the authored premature-fork illustration.
 2. Click Read verified chain example. Confirm DISTINGUISHABLE, round 2, and both failed defending replies.
 3. Inspect VALIDATION.md and the receipt and finalized record in evidence/.
-4. Select the preserved or unspecified-action examples to explore the separately labelled authored fixtures.
+4. Select the preserved example and click Read verified chain example. Confirm ADOPTED and its surviving relation. The unspecified-action example remains a separately labelled local fixture.
 
 ## Links
 
