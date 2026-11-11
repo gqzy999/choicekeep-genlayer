@@ -1,2 +1,41 @@
-import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {canonical,signature,checkProof,fixtures} from '../src/proof.js';import {leader,succeeded} from '../src/transport.js';
-const sha=x=>createHash('sha256').update(x).digest('hex'),d=JSON.parse(fs.readFileSync('evidence/deployment.json')),r=JSON.parse(fs.readFileSync('evidence/early-fork-observed.json')),tx=JSON.parse(fs.readFileSync('evidence/compare-observed.json'));assert.equal(sha(fs.readFileSync('contracts/choicekeep.py')),d.sourceSha256);assert.equal(d.chainId,61999);assert.equal(r.protocol,d.protocol);assert.equal(r.owner,d.owner);assert.equal(r.state,'DISTINGUISHABLE');assert.equal(r.input_hash,sha(canonical(r.spec)));assert.equal(canonical(r.accepted.rows.map(x=>x.moves)),canonical(fixtures['early-fork']));checkProof(r);assert.equal(r.certificate,sha(canonical({protocol:r.protocol,input_hash:r.input_hash,signature:signature(r.accepted),proof:r.proof})));assert(succeeded(tx));assert.equal(tx.to_address.toLowerCase(),d.address);assert.equal(tx.from_address.toLowerCase(),r.owner);assert.equal(BigInt(tx.value||0),0n);const votes=Object.values(tx.consensus_data.votes);assert(votes.filter(x=>x==='agree').length>=3);assert.equal(leader(tx).execution_result,'SUCCESS');console.log('Frozen source, complete transition vector, proof, certificate and finalized majority receipt verified offline.');
+import fs from "node:fs";
+import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
+import { canonical, signature, checkProof, fixtures } from "../src/proof.js";
+import { leader, succeeded } from "../src/transport.js";
+const sha = (x) => createHash("sha256").update(x).digest("hex"),
+  d = JSON.parse(fs.readFileSync("evidence/deployment.json")),
+  r = JSON.parse(fs.readFileSync("evidence/early-fork-observed.json")),
+  tx = JSON.parse(fs.readFileSync("evidence/compare-observed.json"));
+assert.equal(sha(fs.readFileSync("contracts/choicekeep.py")), d.sourceSha256);
+assert.equal(d.chainId, 61999);
+assert.equal(r.protocol, d.protocol);
+assert.equal(r.owner, d.owner);
+assert.equal(r.state, "DISTINGUISHABLE");
+assert.equal(r.input_hash, sha(canonical(r.spec)));
+assert.equal(
+  canonical(r.accepted.rows.map((x) => x.moves)),
+  canonical(fixtures["early-fork"]),
+);
+checkProof(r);
+assert.equal(
+  r.certificate,
+  sha(
+    canonical({
+      protocol: r.protocol,
+      input_hash: r.input_hash,
+      signature: signature(r.accepted),
+      proof: r.proof,
+    }),
+  ),
+);
+assert(succeeded(tx));
+assert.equal(tx.to_address.toLowerCase(), d.address);
+assert.equal(tx.from_address.toLowerCase(), r.owner);
+assert.equal(BigInt(tx.value || 0), 0n);
+const votes = Object.values(tx.consensus_data.votes);
+assert(votes.filter((x) => x === "agree").length >= 3);
+assert.equal(leader(tx).execution_result, "SUCCESS");
+console.log(
+  "Frozen source, complete transition vector, proof, certificate and finalized majority receipt verified offline.",
+);

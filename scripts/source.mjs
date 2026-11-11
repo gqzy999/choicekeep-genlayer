@@ -1,1 +1,15 @@
-import fs from 'node:fs';import {createHash} from 'node:crypto';const source=fs.readFileSync('contracts/choicekeep.py');fs.copyFileSync('contracts/choicekeep.py','public/choicekeep.py');fs.writeFileSync('public/source.json',JSON.stringify({protocol:'choicekeep-1',sha256:createHash('sha256').update(source).digest('hex')},null,2));
+import fs from "node:fs";
+import { createHash } from "node:crypto";
+const source = fs.readFileSync("contracts/choicekeep.py");
+fs.copyFileSync("contracts/choicekeep.py", "public/choicekeep.py");
+fs.writeFileSync(
+  "public/source.json",
+  JSON.stringify(
+    {
+      protocol: "choicekeep-1",
+      sha256: createHash("sha256").update(source).digest("hex"),
+    },
+    null,
+    2,
+  ),
+);
