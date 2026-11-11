@@ -1,0 +1,12 @@
+{
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "address": "0x86181ced681f7832b0475780a96493e389c84cf5",
+  "owner": "0xe063007cafb98a7ee0ba762aa83bb7d77770e739",
+  "protocol": "choicekeep-1",
+  "sourceSha256": "6ca74f6179d85077257f1cbec8bbcb3f52ac5b6970b42c645322b9cb9e7b0347",
+  "deploymentTransaction": "0x8b729e0dad52b0ba543bc093e16213e2708fc601293ae97caccb380578269347",
+  "examples": [
+    "early-fork"
+  ]
+}

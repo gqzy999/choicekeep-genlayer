@@ -1,0 +1,28 @@
+{
+  "chainId": 61999,
+  "protocol": "choicekeep-1",
+  "sourceSha256": "6ca74f6179d85077257f1cbec8bbcb3f52ac5b6970b42c645322b9cb9e7b0347",
+  "transactions": [
+    {
+      "operation": "deploy",
+      "hash": "0x8b729e0dad52b0ba543bc093e16213e2708fc601293ae97caccb380578269347",
+      "status": "FINALIZED",
+      "result": 6,
+      "execution": "SUCCESS"
+    },
+    {
+      "operation": "early-fork-register",
+      "hash": "0xae2f16d934e5b994165b840a78d60463144819b2acfe191ef9fa44ae57ecb76f",
+      "status": "FINALIZED",
+      "result": 6,
+      "execution": "SUCCESS"
+    },
+    {
+      "operation": "early-fork-compare",
+      "hash": "0xc519afcc6003cfd6f7b1248bf9efa01a9c4da5e7ba82546f4e079477b8bcab5a",
+      "status": "FINALIZED",
+      "result": 6,
+      "execution": "SUCCESS"
+    }
+  ]
+}

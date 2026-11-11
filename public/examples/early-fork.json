@@ -1,0 +1,53 @@
+{
+  "title": "A premature fork loses the next choice",
+  "context": "Two versions of a public review workflow are compared as finite labelled transition systems. All states and action outcomes are declared below. Observations are the visible status only. There are no hidden steps, output events, clocks or external effects. Initial state is the first listed state of each version. Nondeterminism is an internal choice of a single successor, not two sequential moves.",
+  "actions": [
+    "advance",
+    "return"
+  ],
+  "left": {
+    "name": "Open review protocol",
+    "states": [
+      {
+        "name": "draft",
+        "observation": "open",
+        "rule": "On advance move to review. The return action is disabled. These are the only actions."
+      },
+      {
+        "name": "review",
+        "observation": "open",
+        "rule": "On advance move to closed. On return move to draft. These are the only actions."
+      },
+      {
+        "name": "closed",
+        "observation": "closed",
+        "rule": "Both advance and return are disabled. No action is enabled in this state."
+      }
+    ]
+  },
+  "right": {
+    "name": "Premature commitment implementation",
+    "states": [
+      {
+        "name": "queued",
+        "observation": "open",
+        "rule": "On advance move nondeterministically to either review-A or review-B, choosing one of those two destinations. The return action is disabled. These are the only actions."
+      },
+      {
+        "name": "review-A",
+        "observation": "open",
+        "rule": "On advance move to archived. The return action is disabled. These are the only actions."
+      },
+      {
+        "name": "review-B",
+        "observation": "open",
+        "rule": "On return move to queued. The advance action is disabled. These are the only actions."
+      },
+      {
+        "name": "archived",
+        "observation": "closed",
+        "rule": "Both advance and return are disabled. No action is enabled in this state."
+      }
+    ]
+  }
+}
